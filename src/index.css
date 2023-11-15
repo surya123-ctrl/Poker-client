@@ -191,12 +191,15 @@ nav .logo-container .logo {
 
 .onboarding form input[type="radio"] {
   display: none;
+  cursor: pointer;
 }
 
 .onboarding form input[type="number"] {
   width: 10%;
 }
-
+.onboarding form input[type="radio"] {
+  cursor: pointer;
+}
 .onboarding form input[type="radio"]:checked + label {
   border: solid 2px rgb(221, 39, 22);
 }

@@ -215,7 +215,15 @@ nav .logo-container .logo {
 .onboarding form .photo-container img {
   width: 100%;
 }
-
+@media only screen and (max-width: 650px) {
+  .onboarding form {
+    display: block;
+    /* width: max-content; */
+  }
+  .onboarding form section {
+    width: 100%;
+  }
+}
 /*-------- Dashboard  --------*/
 .dashboard {
   display: flex;

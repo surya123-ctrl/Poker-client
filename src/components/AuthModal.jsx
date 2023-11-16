@@ -18,24 +18,31 @@ const AuthModal = ({ setShowModal, setIsSignUp, isSignUp }) => {
   // sds
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
       if (isSignUp && password !== confirmPassword) {
-        setError("Password need to match");
+        setError("Passwords need to match!");
         return;
       }
-      const response = await axios.post("http://localhost:8000/signup", {
-        email,
-        password,
-      });
-      setCookie("Email", response.data.email);
-      setCookie("userId", response.data.userId);
+
+      const response = await axios.post(
+        `http://localhost:8000/${isSignUp ? "signup" : "login"}`,
+        { email, password }
+      );
+
       setCookie("AuthToken", response.data.token);
+      setCookie("UserId", response.data.user_id);
+
       const success = response.status === 201;
-      if (success) navigate("/onboarding");
+      if (success && isSignUp) navigate("/onboarding");
+      if (success && !isSignUp) navigate("/dashboard");
+
+      window.location.reload();
     } catch (error) {
       console.log(error);
     }
   };
+
   return (
     <div className="auth-modal">
       <div onClick={handleClick} className="close-icon">

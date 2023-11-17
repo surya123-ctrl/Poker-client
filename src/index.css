@@ -254,6 +254,7 @@ nav .logo-container .logo {
   border-radius: 30px;
   background-size: cover;
   background-position: center;
+  color: white;
 }
 
 .card h3 {
@@ -265,9 +266,40 @@ nav .logo-container .logo {
   bottom: 0;
   padding: 10px;
 }
+@media only screen and (max-width: 800px) {
+  .dashboard {
+    /* background-color: lightblue; */
+    display: block;
+  }
+  .dashboard .chat-container,
+  .dashboard .swipe-container {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .primary-title {
+    font-size: 40px;
+  }
+  nav .logo-container {
+    width: 130px;
+    /* margin: 15px; */
+  }
+  /* .chat-container {
+    width: 100%;
+  } */
+  .swipe-info {
+    display: none;
+  }
+}
 
 /*-------- Chat Container --------*/
-
+.chat-message-container {
+  display: flex;
+  cursor: pointer;
+}
+.chat-message-container:hover {
+  opacity: 0.8;
+}
 .chat-container {
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
@@ -327,7 +359,20 @@ nav .logo-container .logo {
   height: 60vh;
   overflow-y: auto;
 }
-
+.match-card {
+  cursor: pointer;
+  display: flex;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.match-card:hover {
+  background: linear-gradient(45deg, rgb(254, 48, 114), rgb(255, 89, 64));
+  color: white;
+}
 /*-------- Chat Input --------*/
 .chat-input {
   padding: 20px;

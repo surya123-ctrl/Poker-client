@@ -267,6 +267,7 @@ nav .logo-container .logo {
 }
 
 /*-------- Chat Container --------*/
+
 .chat-container {
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
@@ -291,6 +292,7 @@ nav .logo-container .logo {
   font-size: 20px;
   margin: 2px;
   padding: 10px;
+  cursor: pointer;
 }
 
 .chat-container .option:disabled {
@@ -303,6 +305,7 @@ nav .logo-container .logo {
   align-items: center;
   padding: 20px;
   color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 
 .img-container {

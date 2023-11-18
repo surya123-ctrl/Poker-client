@@ -128,7 +128,7 @@ const Dashboard = () => {
   const getUser = async () => {
     try {
       const response = await axios.get(
-        "https://poker-server-i90xis3w6-surya123-ctrl.vercel.app/user",
+        "https://poker-server-iota.vercel.app/user",
         {
           params: { userId },
         }
@@ -141,7 +141,7 @@ const Dashboard = () => {
   const getGenderedUsers = async () => {
     try {
       const response = await axios.get(
-        "https://poker-server-i90xis3w6-surya123-ctrl.vercel.app/gendered-users",
+        "https://poker-server-iota.vercel.app/gendered-users",
         {
           params: { gender: user?.gender_interest },
         }
@@ -164,13 +164,10 @@ const Dashboard = () => {
 
   const updateMatches = async (matchedUserId) => {
     try {
-      await axios.put(
-        "https://poker-server-i90xis3w6-surya123-ctrl.vercel.app/addmatch",
-        {
-          userId,
-          matchedUserId,
-        }
-      );
+      await axios.put("https://poker-server-iota.vercel.app/addmatch", {
+        userId,
+        matchedUserId,
+      });
       getUser();
     } catch (err) {
       console.log(err);

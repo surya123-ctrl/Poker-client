@@ -28,7 +28,7 @@ const OnBoarding = () => {
     e.preventDefault();
     try {
       const response = await axios.put(
-        "https://poker-server-i90xis3w6-surya123-ctrl.vercel.app/user",
+        "https://poker-server-iota.vercel.app/user",
         {
           formData,
         }

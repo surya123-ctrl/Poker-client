@@ -26,7 +26,9 @@ const AuthModal = ({ setShowModal, setIsSignUp, isSignUp }) => {
       }
 
       const response = await axios.post(
-        `http://localhost:8000/${isSignUp ? "signup" : "login"}`,
+        `https://poker-server-i90xis3w6-surya123-ctrl.vercel.app/${
+          isSignUp ? "signup" : "login"
+        }`,
         { email, password }
       );
 

@@ -65,7 +65,10 @@ const ChatInput = ({
     };
 
     try {
-      await axios.post("http://localhost:8000/message", { message });
+      await axios.post(
+        "https://poker-server-i90xis3w6-surya123-ctrl.vercel.app/",
+        { message }
+      );
       getUserMessages();
       getClickedUsersMessages();
       setTextArea("");
